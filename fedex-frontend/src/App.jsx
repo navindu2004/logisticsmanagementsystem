@@ -8,6 +8,7 @@ import Customers from "./features/customers/Customers";
 import Vehicles from "./features/vehicles/Vehicles";
 import ProtectedRoute from "./components/ProtectedRoute";
 import CreateOrder from "./features/orders/CreateOrder";
+import TrackOrder from "./features/orders/TrackOrder";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/customers" element={<ProtectedRoute><Customers /></ProtectedRoute>} />
         <Route path="/vehicles" element={<ProtectedRoute><Vehicles /></ProtectedRoute>} />
         <Route path="\/orders/new\" element={<ProtectedRoute><CreateOrder /></ProtectedRoute>} />
+        <Route path="/orders/:id/track" element={<ProtectedRoute><TrackOrder /></ProtectedRoute>} />
       </Routes>
     </Router>
   );
